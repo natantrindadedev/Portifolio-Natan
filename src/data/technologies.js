@@ -5,7 +5,7 @@ export const technologyCategories = [
       pt: "Frontend",
       en: "Frontend"
     },
-    skills: ["React", "JavaScript", "HTML", "CSS", "Tailwind CSS", "Vite", "Axios"]
+    skills: ["React", "JavaScript", "HTML", "CSS", "Tailwind CSS", "Vite"]
   },
   {
     id: "backend",
@@ -13,7 +13,7 @@ export const technologyCategories = [
       pt: "Backend",
       en: "Backend"
     },
-    skills: ["Python", "Django", "Django REST Framework", "Node.js", "C#"]
+    skills: ["Python", "Django", "Django REST Framework", "Node.js", "JavaScript", "FastAPI"]
   },
   {
     id: "data",

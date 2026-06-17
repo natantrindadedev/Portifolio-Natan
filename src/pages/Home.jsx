@@ -110,18 +110,26 @@ export default function Home() {
     return Object.keys(tempErrors).length === 0;
   };
 
+  const sanitizeInput = (val) => {
+    if (typeof val !== 'string') return '';
+    return val
+      .replace(/<[^>]*>/g, '') // Strip HTML tags
+      .replace(/javascript:/gi, '') // Prevent javascript: protocol injection
+      .trim();
+  };
+
   const handleContactSubmit = (e) => {
     e.preventDefault();
     if (!validateForm()) return;
 
-    const name = formData.name.trim();
-    const email = formData.email.trim();
-    const message = formData.message.trim();
+    const name = sanitizeInput(formData.name);
+    const email = sanitizeInput(formData.email);
+    const message = sanitizeInput(formData.message);
 
     if (language === 'pt') {
       const text = `Olá Natan,\n\nMeu nome é ${name} (${email}).\n\n${message}`;
       const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
-      window.open(url, '_blank');
+      window.open(url, '_blank', 'noopener,noreferrer');
     } else {
       const subject = `Contact from Portfolio - ${name}`;
       const body = `Hello Natan,\n\n${message}\n\nBest regards,\n${name}\nEmail: ${email}`;

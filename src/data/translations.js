@@ -9,7 +9,7 @@ export const translations = {
       contact: "Contato"
     },
     hero: {
-      title: "Natan Trindade",
+      title: "Natan Trindade Corrêa",
       subtitle: "Analista de Dados & Desenvolvedor Full-Stack",
       phrase: "Transformo dados, processos e ideias em soluções digitais reais.",
       btnProjects: "Ver projetos",
@@ -74,7 +74,7 @@ export const translations = {
       contact: "Contact"
     },
     hero: {
-      title: "Natan Trindade",
+      title: "Natan Trindade Corrêa",
       subtitle: "Data Analyst & Full-Stack Developer",
       phrase: "I turn data, processes, and ideas into real digital solutions.",
       btnProjects: "View projects",
